@@ -1,13 +1,13 @@
 img{
     
     border-radius: 500px;
-    height: 50%;
+    height: 60%;
     width: auto;
    
 }
 
 .container{
-    
+    min-height: 85vh;
     color: white;
     font-family: Lora;
    
