@@ -9,7 +9,7 @@ export class FooterComponent implements OnInit {
 
   constructor() { }
   date = new Date().getFullYear();
-
+  
   ngOnInit(): void {
     
   }
