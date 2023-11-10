@@ -1,5 +1,9 @@
+<body>
+  
+
 <nav class="navbar navbar-expand-lg navbar-dark ">
-  <a class="navbar-brand" href="#"><h1>JD</h1></a>
+  <a class="navbar-brand" (click)="goHome()"><h1>JD</h1></a>
+  
   <div class="container-fluid">
   </div>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -8,13 +12,13 @@
     <div class="collapse navbar-collapse justify-end" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item active">
-          <a class="nav-link" href="about">About <span class="sr-only">(current)</span></a>
+          <a class="nav-link" (click)="goAbout()">About <span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="projects">Projects</a>
+          <a class="nav-link" (click)="goProjects()">Projects</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="contacts">Contact</a>
+          <a class="nav-link" (click)="goContacts()">Contact</a>
         </li>
         <li class="nav-item">
            <button type="button"  class="btn btn-outline-light a-download">
@@ -25,4 +29,9 @@
     </div>
   </nav>
 
-  
+<app-home *ngIf="home"></app-home>
+<app-about *ngIf="about"></app-about>
+<app-contacts *ngIf="contacts"></app-contacts>
+<app-projects *ngIf="projects"></app-projects>
+<app-footer></app-footer>
+</body>
