@@ -2,6 +2,10 @@
     position: relative;
     overflow: hidden;
     align-self: center;
+    width: 50%;
+    height: auto;
+    text-align: center;
+    display: flex;
   
     .carousel-inner {
       display: flex;
@@ -35,5 +39,9 @@
     .carousel-control-next {
       right: 10px;
     }
+  }
+
+  .row {
+    align-items: center;
   }
   
