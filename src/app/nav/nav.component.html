@@ -1,46 +1,54 @@
 <body>
-  
 
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <div class="container-fluid">
 
-    <!-- Logo LEFT -->
-    <a class="navbar-brand" (click)="goHome()"><h1>JD</h1></a>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
 
-    <!-- Hamburger RIGHT -->
-    <button class="navbar-toggler ms-auto" type="button"
-      data-bs-toggle="collapse"
-      data-bs-target="#navbarNav">
+      <!-- Logo LEFT -->
+      <a class="navbar-brand" (click)="goHome()"><h1>JD</h1></a>
 
-      <span class="navbar-toggler-icon"></span>
-    </button>
+      <!-- Hamburger RIGHT -->
+      <button class="navbar-toggler ms-auto" type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNav">
 
-    <!-- Menu -->
-    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link" (click)="goAbout()">About</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" (click)="goProjects()">Projects</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" (click)="goContacts()">Contact</a>
-        </li>
-        <li class="nav-item">
-          <a href="../../assets/Joseph Digoro(1).pdf" download class="btn btn-outline-light">
-            Resume
-          </a>
-        </li>
-      </ul>
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Menu -->
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" (click)="goAbout()">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" (click)="goProjects()">Projects</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" (click)="goContacts()">Contact</a>
+          </li>
+          <li class="nav-item">
+            <a href="../../assets/Joseph Digoro(1).pdf" download class="btn btn-outline-light">
+              Resume
+            </a>
+          </li>
+        </ul>
+      </div>
+
     </div>
+  </nav>
 
-  </div>
-</nav>
-
-<app-home *ngIf="home"></app-home>
-<app-about *ngIf="about"></app-about>
-<app-contacts *ngIf="contacts"></app-contacts>
-<app-projects *ngIf="projects"></app-projects>
-<app-footer></app-footer>
+  @if (home) {
+    <app-home></app-home>
+  }
+  @if (about) {
+    <app-about></app-about>
+  }
+  @if (contacts) {
+    <app-contacts></app-contacts>
+  }
+  @if (projects) {
+    <app-projects></app-projects>
+  }
+  <app-footer></app-footer>
 </body>
