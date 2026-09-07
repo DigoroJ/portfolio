@@ -1,0 +1,131 @@
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-dark">
+
+    <div class="container-fluid">
+
+      <!-- LOGO -->
+      <a class="navbar-brand" (click)="goHome()">
+        <span class="brand-main">MASTER H</span>
+        <span class="brand-sub">PHOTOGRAPHY</span>
+      </a>
+
+
+      <!-- MOBILE MENU -->
+      <button
+        class="navbar-toggler ms-auto"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNav">
+
+        <span class="navbar-toggler-icon"></span>
+
+      </button>
+
+
+      <!-- NAVIGATION -->
+      <div
+        class="collapse navbar-collapse justify-content-end"
+        id="navbarNav">
+
+        <ul class="navbar-nav align-items-lg-center">
+
+          <li class="nav-item">
+            <a
+              class="nav-link"
+              [class.active]="home"
+              (click)="goHome()">
+              Home
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a
+              class="nav-link"
+              [class.active]="portfolio"
+              (click)="goPortfolio()">
+              Portfolio
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a
+              class="nav-link"
+              [class.active]="services"
+              (click)="goServices()">
+              Services
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a
+              class="nav-link"
+              [class.active]="about"
+              (click)="goAbout()">
+              About
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a
+              class="nav-link"
+              [class.active]="contacts"
+              (click)="goContacts()">
+              Contact
+            </a>
+          </li>
+
+          <li class="nav-item ms-lg-3">
+
+            <button
+              class="book-btn"
+              (click)="goContacts()">
+
+              BOOK A SHOOT
+
+            </button>
+
+          </li>
+
+        </ul>
+
+      </div>
+
+    </div>
+
+  </nav>
+
+
+  <!-- HOME -->
+  @if (home) {
+    <app-photo-home></app-photo-home>
+  }
+
+
+  <!-- PORTFOLIO -->
+  @if (portfolio) {
+    <app-photo-portfolio></app-photo-portfolio>
+  }
+
+
+  <!-- SERVICES -->
+  @if (services) {
+    <app-photo-service></app-photo-service>
+  }
+
+
+  <!-- ABOUT -->
+  @if (about) {
+    <app-photo-about></app-photo-about>
+  }
+
+
+  <!-- CONTACT -->
+  @if (contacts) {
+    <app-photo-contact></app-photo-contact>
+  }
+
+
+  <app-photo-footer></app-photo-footer>
+
+</body>

@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #080808;
+  color: white;
+
+  font-family: 'DM Sans', sans-serif;
+}
+
+.navbar {
+  min-height: 80px;
+
+  padding: 10px 5%;
+
+  background: #080808 !important;
+
+  border-bottom: 1px solid rgba(201,164,92,.2);
+
+  position: sticky;
+  top: 0;
+
+  z-index: 9999;
+}
+
+.navbar-brand {
+  cursor: pointer;
+
+  display: flex;
+  flex-direction: column;
+
+  line-height: 1;
+}
+
+.brand-main {
+  font-family: Georgia, serif;
+
+  font-size: 25px;
+
+  letter-spacing: 4px;
+
+  color: white;
+}
+
+.brand-sub {
+  color: #c9a45c;
+
+  font-size: 8px;
+
+  letter-spacing: 3px;
+
+  margin-top: 6px;
+}
+
+.nav-link {
+  color: #999 !important;
+
+  cursor: pointer;
+
+  font-size: 12px;
+
+  letter-spacing: 1px;
+
+  margin: 0 7px;
+
+  transition: .3s;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: #c9a45c !important;
+}
+
+.book-btn {
+  background: transparent;
+
+  border: 1px solid #c9a45c;
+
+  color: #c9a45c;
+
+  padding: 11px 20px;
+
+  font-size: 10px;
+
+  letter-spacing: 2px;
+
+  cursor: pointer;
+
+  transition: .3s;
+}
+
+.book-btn:hover {
+  background: #c9a45c;
+
+  color: #080808;
+}
+
+
+/* MOBILE NAV */
+
+@media(max-width:991px) {
+
+  .navbar-collapse {
+    background: #080808;
+
+    margin: 10px -5% -10px;
+
+    padding: 20px 5%;
+  }
+
+  .navbar-nav {
+    align-items: stretch !important;
+  }
+
+  .nav-item {
+    border-bottom: 1px solid #171717;
+  }
+
+  .nav-link {
+    padding: 15px 5px !important;
+  }
+
+  .book-btn {
+    margin: 15px 0;
+    width: 100%;
+  }
+
+}
