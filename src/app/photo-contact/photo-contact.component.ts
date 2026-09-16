@@ -14,6 +14,7 @@ export class PhotoContactComponent {
   sending = false;
 
   formData = {
+    cellphone: '',
     name: '',
     email: '',
     service: '',
@@ -33,6 +34,8 @@ export class PhotoContactComponent {
       subject: `New Master H Enquiry - ${this.formData.service}`,
 
       name: this.formData.name,
+
+      cellphone: this.formData.cellphone,
 
       email: this.formData.email,
 
@@ -63,7 +66,8 @@ export class PhotoContactComponent {
               email: '',
               service: '',
               date: '',
-              message: ''
+              message: '',
+              cellphone: ''
             };
 
           } else {
