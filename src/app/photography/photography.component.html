@@ -98,7 +98,7 @@
 
   <!-- HOME -->
   @if (home) {
-    <app-photo-home></app-photo-home>
+    <app-photo-home (navigate)="navigateFromFooter($event)"></app-photo-home>
   }
 
 

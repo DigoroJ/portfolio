@@ -42,53 +42,71 @@
     </div>
 
 
-    <form>
+    <form (ngSubmit)="sendEnquiry()" #contactForm="ngForm">
 
-      <div class="form-row">
+  <div class="form-row">
 
-        <input
-          type="text"
-          placeholder="Your Name">
+    <input
+      type="text"
+      name="name"
+      [(ngModel)]="formData.name"
+      placeholder="Your Name"
+      required>
 
-        <input
-          type="email"
-          placeholder="Email Address">
+    <input
+      type="email"
+      name="email"
+      [(ngModel)]="formData.email"
+      placeholder="Email Address"
+      required>
 
-      </div>
-
-
-      <select>
-
-        <option selected disabled>
-          What service do you need?
-        </option>
-
-        <option>Photography</option>
-        <option>Videography</option>
-        <option>Wedding Coverage</option>
-        <option>Event Coverage</option>
-        <option>Portrait Session</option>
-        <option>Brand Photography</option>
-
-      </select>
+  </div>
 
 
-      <input
-        type="text"
-        placeholder="Event / Shoot Date">
+  <select
+    name="service"
+    [(ngModel)]="formData.service"
+    required>
+
+    <option value="" disabled>
+      What service do you need?
+    </option>
+
+    <option>Photography</option>
+    <option>Videography</option>
+    <option>Wedding Coverage</option>
+    <option>Event Coverage</option>
+    <option>Portrait Session</option>
+    <option>Brand Photography</option>
+
+  </select>
 
 
-      <textarea
-        rows="6"
-        placeholder="Tell us about your project">
-      </textarea>
+  <input
+    type="date"
+    name="date"
+    [(ngModel)]="formData.date"
+    required>
 
 
-      <button type="submit">
-        SEND ENQUIRY →
-      </button>
+  <textarea
+    name="message"
+    [(ngModel)]="formData.message"
+    rows="6"
+    placeholder="Tell us about your project"
+    required>
+  </textarea>
 
-    </form>
+
+  <button
+    type="submit"
+    [disabled]="contactForm.invalid || sending">
+
+    {{ sending ? 'SENDING...' : 'SEND ENQUIRY →' }}
+
+  </button>
+
+</form>
 
   </div>
 

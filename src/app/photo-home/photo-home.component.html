@@ -16,8 +16,8 @@
     </p>
 
     <div class="hero-buttons">
-      <button class="gold-btn">VIEW OUR WORK</button>
-      <button class="outline-btn">BOOK A SHOOT</button>
+      <button (click)="goPortfolio()" class="gold-btn">VIEW OUR WORK</button>
+      <button (click)="goContacts()" class="outline-btn">BOOK A SHOOT</button>
     </div>
 
   </div>
@@ -95,7 +95,7 @@
         corporate and lifestyle photography.
       </p>
 
-      <button>EXPLORE →</button>
+      <button (click)="downloadPricelist('picture.png', 'Master-H-Photo.png')">EXPLORE →</button>
 
     </div>
 
@@ -113,7 +113,7 @@
         from the first frame to the last.
       </p>
 
-      <button>EXPLORE →</button>
+      <button (click)="downloadPricelist('video.png', 'Master-H-Video.png')">EXPLORE →</button>
 
     </div>
 
@@ -131,7 +131,7 @@
         for events big and small.
       </p>
 
-      <button>EXPLORE →</button>
+      <button (click)="downloadPricelist('combo.png', 'Master-H-combo.png')">EXPLORE →</button>
 
     </div>
 
@@ -211,7 +211,7 @@
       Let's create something unforgettable.
     </p>
 
-    <button class="gold-btn">
+    <button (click)="goContacts()" class="gold-btn">
       BOOK A SHOOT
     </button>
 
