@@ -13,12 +13,12 @@ import { PhotoContactComponent } from "../photo-contact/photo-contact.component"
   styleUrl: './photography.component.css',
 })
 export class PhotographyComponent {
+
   home = true;
   portfolio = false;
   services = false;
   about = false;
   contacts = false;
-
 
   goHome() {
     this.home = true;
@@ -28,7 +28,6 @@ export class PhotographyComponent {
     this.contacts = false;
   }
 
-
   goPortfolio() {
     this.home = false;
     this.portfolio = true;
@@ -36,7 +35,6 @@ export class PhotographyComponent {
     this.about = false;
     this.contacts = false;
   }
-
 
   goServices() {
     this.home = false;
@@ -46,7 +44,6 @@ export class PhotographyComponent {
     this.contacts = false;
   }
 
-
   goAbout() {
     this.home = false;
     this.portfolio = false;
@@ -55,13 +52,49 @@ export class PhotographyComponent {
     this.contacts = false;
   }
 
-
   goContacts() {
     this.home = false;
     this.portfolio = false;
     this.services = false;
     this.about = false;
     this.contacts = true;
+  }
+
+  scrollToTop() {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  });
+}
+
+  navigateFromFooter(section: string) {
+
+    switch (section) {
+
+      case 'home':
+        this.goHome();
+        break;
+
+      case 'portfolio':
+        this.goPortfolio();
+        break;
+
+      case 'services':
+        this.goServices();
+        break;
+
+      case 'about':
+        this.goAbout();
+        break;
+
+      case 'contacts':
+        this.goContacts();
+        break;
+
+    }
+
+    this.scrollToTop();
+
   }
 
 }
