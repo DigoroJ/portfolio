@@ -1,62 +1,312 @@
-<!-- <app-nav></app-nav> -->
+<section class="contact-section">
 
-<body>
-    
-    <div class="container">
-        <div class="row">
-          <div class="col-sm-4">
-            <img src="../../assets/kisspng-computer-programming-software-developer-openvpn-eu-5d42a776e01df1.037503031564649334918.png" alt="">
+  <div class="contact-header">
+
+    <span class="section-label">
+      GET IN TOUCH
+    </span>
+
+    <h1>
+      Let's Work <span>Together</span>
+    </h1>
+
+    <p>
+      Have a project, opportunity or idea you'd like to discuss?
+      Send me an enquiry and I'll get back to you.
+    </p>
+
+  </div>
+
+
+  <div class="contact-container">
+
+    <!-- =========================
+         CONTACT INFORMATION
+    ========================== -->
+
+    <div class="contact-info">
+
+      <h2>Let's talk.</h2>
+
+      <p>
+        Whether you need a website, web application, software
+        development support or would simply like to discuss an
+        opportunity, feel free to get in touch.
+      </p>
+
+
+      <div class="contact-details">
+
+        <!-- Email -->
+
+        <div class="contact-item">
+
+          <div class="contact-icon">
+            ✉
           </div>
-    
-    
-          <div class="col-sm-8">
 
-            <div class="upRight">
+          <div>
 
-        
-          <p><i class="fa fa-home fa-fw w3-margin-right w3-large w3-text-blue "></i>Soshanguve, Gauteng, South Africa</p>
-          <p><i class="fa fa-envelope fa-fw w3-margin-right w3-large w3-text-blue "></i>digorojoseph&#64;gmail.com</p>
-          <p><i class="fa fa-phone fa-fw w3-margin-right w3-large w3-text-blue "></i>060 960 6081 | 074 369 0469</p>
-          
-          <p class="w3-text-blue "> <i class="fa fa-linkedin hr fa-xlarge fa-fw w3-margin-right"> </i> <a href="https://www.linkedin.com/in/joseph-digoro-b15913a3/">Joseph Digoro</a>  </p>
-          <hr>
+            <span>Email</span>
 
-            </div>
+            <a href="mailto:digorojoseph@gmail.com">
+              digorojoseph@gmail.com
+            </a>
 
-            <h1>Send messege</h1>
-            <form action="https://formsubmit.co/digorojoseph@gmail.com" method="POST">
-                <div class="mb-3">
-                    <label for="Name" class="form-label">Name</label>
-                    <input type="text" name="name" class="form-control">
-                  </div>
-                  <div class="mb-3">
-                    <label for="Number" class="form-label">Cell number</label>
-                    <input type="text" class="form-control" id="Number" name="cell number">
-                  </div>
-                <div class="mb-3">
-                  <label for="" class="form-label">Email address</label>
-                  <input type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                  <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
-                </div>
-                <div class="mb-3">
-                  <label for="messege" class="form-label">Message</label>
-                  <input type="text" name="message" class="form-control" id="exampleInputPassword1">
-                </div>
-                
-                <button type="submit" class="btn btn-primary">Send Messege</button>
-              </form>
-
-
-
-              <br>
-    
           </div>
+
         </div>
-        <hr>
+
+
+        <!-- Phone -->
+
+        <div class="contact-item">
+
+          <div class="contact-icon">
+            ☎
+          </div>
+
+          <div>
+
+            <span>Phone</span>
+
+            <a href="tel:+27609606081">
+              060 960 6081
+            </a>
+
+          </div>
+
+        </div>
+
+
+        <!-- Location -->
+
+        <div class="contact-item">
+
+          <div class="contact-icon">
+            📍
+          </div>
+
+          <div>
+
+            <span>Location</span>
+
+            <p>
+              Gauteng, South Africa
+            </p>
+
+          </div>
+
+        </div>
+
       </div>
-    
-      <!-- <app-footer></app-footer> -->
-</body>
 
 
+      <!-- Social Links -->
 
+      <div class="social-links">
+
+        <a
+          href="https://github.com/DigoroJ"
+          target="_blank"
+          rel="noopener noreferrer">
+
+          GitHub
+
+        </a>
+
+
+        <a
+          href="https://www.linkedin.com/in/joseph-digoro-b15913a3/"
+          target="_blank"
+          rel="noopener noreferrer">
+
+          LinkedIn
+
+        </a>
+
+      </div>
+
+    </div>
+
+
+    <!-- =========================
+         ENQUIRY FORM
+    ========================== -->
+
+    <div class="contact-form-container">
+
+      <form
+        #contactForm="ngForm"
+        (ngSubmit)="sendEnquiry()">
+
+
+        <!-- Name -->
+
+        <div class="form-group">
+
+          <label for="name">
+            Name
+          </label>
+
+          <input
+            id="name"
+            type="text"
+            name="name"
+            [(ngModel)]="formData.name"
+            placeholder="Your Name"
+            required>
+
+        </div>
+
+
+        <!-- Email -->
+
+        <div class="form-group">
+
+          <label for="email">
+            Email Address
+          </label>
+
+          <input
+            id="email"
+            type="email"
+            name="email"
+            [(ngModel)]="formData.email"
+            placeholder="Email Address"
+            required>
+
+        </div>
+
+
+        <!-- Cellphone -->
+
+        <div class="form-group">
+
+          <label for="cellphone">
+            Cellphone
+          </label>
+
+          <input
+            id="cellphone"
+            type="tel"
+            name="cellphone"
+            [(ngModel)]="formData.cellphone"
+            placeholder="Cellphone Number"
+            required>
+
+        </div>
+
+
+        <!-- Service -->
+
+        <div class="form-group">
+
+          <label for="service">
+            What can I help you with?
+          </label>
+
+          <select
+            id="service"
+            name="service"
+            [(ngModel)]="formData.service"
+            required>
+
+            <option
+              value=""
+              disabled>
+
+              Select a service
+
+            </option>
+
+            <option value="Website Development">
+              Website Development
+            </option>
+
+            <option value="Web Application">
+              Web Application
+            </option>
+
+            <option value="Angular Development">
+              Angular Development
+            </option>
+
+            <option value="Frontend Development">
+              Frontend Development
+            </option>
+
+            <option value="Full-Stack Development">
+              Full-Stack Development
+            </option>
+
+            <option value="Software Development">
+              Software Development
+            </option>
+
+            <option value="Other">
+              Other
+            </option>
+
+          </select>
+
+        </div>
+
+
+        <!-- Date -->
+
+        <div class="form-group">
+
+          <label for="date">
+            Preferred Date
+          </label>
+
+          <input
+          id="date"
+          type="date"
+          name="date"
+          [(ngModel)]="formData.date"
+          [min]="minDate"
+          required>
+
+        </div>
+
+
+        <!-- Message -->
+
+        <div class="form-group">
+
+          <label for="message">
+            Message
+          </label>
+
+          <textarea
+            id="message"
+            name="message"
+            [(ngModel)]="formData.message"
+            rows="6"
+            placeholder="Tell me about your project..."
+            required>
+          </textarea>
+
+        </div>
+
+
+        <!-- Submit -->
+
+        <button
+          type="submit"
+          [disabled]="contactForm.invalid || sending">
+
+          {{ sending ? 'SENDING...' : 'SEND ENQUIRY →' }}
+
+        </button>
+
+
+      </form>
+
+    </div>
+
+  </div>
+
+</section>

@@ -1,13 +1,146 @@
-<div class="row">
-  <div class="carousel">
-    <div class="carousel-inner">
-      @for (item of items; track item; let i = $index) {
-        <div class="carousel-item" [ngClass]="{'active': i === currentIndex}">
-          <img [src]="item.src" [alt]="item.alt">
-        </div>
-      }
+<section class="skills-page">
+
+  <div class="section-container">
+
+    <div class="section-heading">
+
+      <span>02 / SKILLS</span>
+
+      <h1>
+        Technical
+        <em>expertise.</em>
+      </h1>
+
+      <p>
+        Technologies and tools I use to design, build and
+        maintain software applications.
+      </p>
+
     </div>
-    <a class="carousel-control-prev" (click)="prev()">&#10094;</a>
-    <a class="carousel-control-next" (click)="next()">&#10095;</a>
+
+
+    <div class="skills-grid">
+
+
+      <!-- FRONTEND -->
+
+      <div class="skill-card">
+
+        <div class="skill-number">
+          01
+        </div>
+
+        <h2>Frontend</h2>
+
+        <div class="skill-list">
+
+          <span>Angular</span>
+          <span>TypeScript</span>
+          <span>JavaScript</span>
+          <span>HTML5</span>
+          <span>CSS3</span>
+          <span>Ionic</span>
+          <span>Bootstrap</span>
+
+        </div>
+
+      </div>
+
+
+      <!-- BACKEND -->
+
+      <div class="skill-card">
+
+        <div class="skill-number">
+          02
+        </div>
+
+        <h2>Backend</h2>
+
+        <div class="skill-list">
+
+          <span>Node.js</span>
+          <span>Express.js</span>
+          <span>REST APIs</span>
+          <span>Java</span>
+          <span>C++</span>
+
+        </div>
+
+      </div>
+
+
+      <!-- DATABASE -->
+
+      <div class="skill-card">
+
+        <div class="skill-number">
+          03
+        </div>
+
+        <h2>Databases</h2>
+
+        <div class="skill-list">
+
+          <span>PostgreSQL</span>
+          <span>MongoDB</span>
+          <span>SQL</span>
+          <span>Oracle SQL</span>
+
+        </div>
+
+      </div>
+
+
+      <!-- TOOLS -->
+
+      <div class="skill-card">
+
+        <div class="skill-number">
+          04
+        </div>
+
+        <h2>Tools & Practices</h2>
+
+        <div class="skill-list">
+
+          <span>Git</span>
+          <span>GitHub</span>
+          <span>GitLab</span>
+          <span>Jira</span>
+          <span>Postman</span>
+          <span>Figma</span>
+          <span>Agile</span>
+
+        </div>
+
+      </div>
+
+
+      <!-- OTHER -->
+
+      <div class="skill-card">
+
+        <div class="skill-number">
+          05
+        </div>
+
+        <h2>Other</h2>
+
+        <div class="skill-list">
+
+          <span>UML</span>
+          <span>System Analysis</span>
+          <span>System Design</span>
+          <span>Networking</span>
+
+        </div>
+
+      </div>
+
+
+    </div>
+
   </div>
-</div>
+
+</section>

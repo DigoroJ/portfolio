@@ -1,48 +1,83 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-    selector: 'app-nav',
-    templateUrl: './nav.component.html',
-    styleUrls: ['./nav.component.css'],
-    standalone: false
+  selector: 'app-nav',
+  templateUrl: './nav.component.html',
+  styleUrls: ['./nav.component.css'],
+  standalone: false
 })
 export class NavComponent implements OnInit {
 
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
   home = true;
   about = false;
+  skills = false;
+  education = false;
   projects = false;
   contacts = false;
 
-  goHome(){
+  // Mobile menu
+  menuOpen = false;
+
+  constructor() {}
+
+  ngOnInit(): void {}
+
+  private resetPages(): void {
+    this.home = false;
+    this.about = false;
+    this.skills = false;
+    this.education = false;
+    this.projects = false;
+    this.contacts = false;
+  }
+
+  closeMenu(): void {
+    this.menuOpen = false;
+  }
+
+  toggleMenu(): void {
+    this.menuOpen = !this.menuOpen;
+  }
+
+  goHome(): void {
+    this.resetPages();
     this.home = true;
-    this.about = false;
-    this.projects = false;
-    this.contacts = false;
+    this.closeMenu();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 
-  goAbout(){
-    this.home = false;
+  goAbout(): void {
+    this.resetPages();
     this.about = true;
-    this.projects = false;
-    this.contacts = false;
+    this.closeMenu();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 
-  goProjects(){
+  goSkills(): void {
+    this.resetPages();
+    this.skills = true;
+    this.closeMenu();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  goEducation(): void {
+    this.resetPages();
+    this.education = true;
+    this.closeMenu();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  goProjects(): void {
+    this.resetPages();
     this.projects = true;
-    this.home = false;
-    this.about = false;
-    this.contacts = false;
+    this.closeMenu();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 
-  goContacts(){
+  goContacts(): void {
+    this.resetPages();
     this.contacts = true;
-    this.home = false;
-    this.about = false;
-    this.projects = false;
+    this.closeMenu();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 }

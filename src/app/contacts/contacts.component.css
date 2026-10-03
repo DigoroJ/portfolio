@@ -1,20 +1,598 @@
+/* =========================================================
+   CONTACT SECTION
+   ========================================================= */
 
-
-.col-sm-8{
-    border-left: solid black;
+:host {
+  display: block;
 }
 
-body{
-    background-color: black;
-    color: white;
+.contact-section {
+  min-height: 100vh;
+
+  padding: 100px 7% 90px;
+
+  box-sizing: border-box;
+
+  background:
+    radial-gradient(
+      circle at 10% 10%,
+      rgba(99, 102, 241, 0.08),
+      transparent 30%
+    ),
+    #080c14;
+
+  color: #ffffff;
 }
 
-img{
-    width:100%;
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.contact-header {
+  max-width: 800px;
+
+  margin: 0 auto 70px;
+
+  text-align: center;
+}
+
+.section-label {
+  display: inline-block;
+
+  margin-bottom: 15px;
+
+  color: #818cf8;
+
+  font-size: 0.8rem;
+
+  font-weight: 700;
+
+  letter-spacing: 2.5px;
+
+  text-transform: uppercase;
+}
+
+.contact-header h1 {
+  margin: 0 0 20px;
+
+  color: #ffffff;
+
+  font-size: clamp(2.4rem, 5vw, 4rem);
+
+  font-weight: 800;
+
+  line-height: 1.1;
+
+  letter-spacing: -1.5px;
+}
+
+.contact-header h1 span {
+  color: #818cf8;
+}
+
+.contact-header p {
+  max-width: 700px;
+
+  margin: 0 auto;
+
+  color: #9ca3af;
+
+  font-size: 1rem;
+
+  line-height: 1.8;
 }
 
 
+/* =========================================================
+   MAIN CONTAINER
+   ========================================================= */
 
-.col-sm-4{
-    padding-top:5rem;
+.contact-container {
+  max-width: 1150px;
+
+  margin: 0 auto;
+
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 0.85fr)
+    minmax(0, 1.15fr);
+
+  gap: 70px;
+
+  align-items: start;
+}
+
+
+/* =========================================================
+   CONTACT INFORMATION
+   ========================================================= */
+
+.contact-info {
+  padding-top: 10px;
+}
+
+.contact-info h2 {
+  margin: 0 0 20px;
+
+  color: #ffffff;
+
+  font-size: 2rem;
+
+  font-weight: 700;
+}
+
+.contact-info > p {
+  margin: 0 0 40px;
+
+  color: #9ca3af;
+
+  font-size: 0.98rem;
+
+  line-height: 1.8;
+}
+
+
+/* =========================================================
+   CONTACT DETAILS
+   ========================================================= */
+
+.contact-details {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 22px;
+}
+
+.contact-item {
+  display: flex;
+
+  align-items: center;
+
+  gap: 16px;
+
+  padding-bottom: 20px;
+
+  border-bottom: 1px solid
+    rgba(255, 255, 255, 0.08);
+}
+
+.contact-icon {
+  width: 46px;
+
+  height: 46px;
+
+  flex-shrink: 0;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border-radius: 12px;
+
+  background:
+    rgba(99, 102, 241, 0.12);
+
+  color: #a5b4fc;
+
+  font-size: 1.1rem;
+}
+
+.contact-item span {
+  display: block;
+
+  margin-bottom: 5px;
+
+  color: #6b7280;
+
+  font-size: 0.72rem;
+
+  font-weight: 700;
+
+  letter-spacing: 1.5px;
+
+  text-transform: uppercase;
+}
+
+.contact-item a,
+.contact-item p {
+  margin: 0;
+
+  color: #ffffff;
+
+  font-size: 0.95rem;
+
+  text-decoration: none;
+
+  line-height: 1.5;
+}
+
+.contact-item a:hover {
+  color: #818cf8;
+}
+
+
+/* =========================================================
+   SOCIAL LINKS
+   ========================================================= */
+
+.social-links {
+  display: flex;
+
+  gap: 12px;
+
+  margin-top: 30px;
+}
+
+.social-links a {
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  padding: 10px 16px;
+
+  border: 1px solid
+    rgba(255, 255, 255, 0.1);
+
+  border-radius: 8px;
+
+  color: #d1d5db;
+
+  font-size: 0.85rem;
+
+  text-decoration: none;
+
+  transition:
+    background 0.25s ease,
+    border-color 0.25s ease,
+    color 0.25s ease;
+}
+
+.social-links a:hover {
+  background:
+    rgba(99, 102, 241, 0.1);
+
+  border-color:
+    rgba(99, 102, 241, 0.4);
+
+  color: #ffffff;
+}
+
+
+/* =========================================================
+   FORM CONTAINER
+   ========================================================= */
+
+.contact-form-container {
+  padding: 32px;
+
+  background:
+    rgba(255, 255, 255, 0.035);
+
+  border: 1px solid
+    rgba(255, 255, 255, 0.08);
+
+  border-radius: 18px;
+
+  box-sizing: border-box;
+
+  box-shadow:
+    0 20px 60px rgba(0, 0, 0, 0.2);
+}
+
+
+/* =========================================================
+   FORM
+   ========================================================= */
+
+.contact-form-container form {
+  width: 100%;
+}
+
+
+/* =========================================================
+   FORM GROUP
+   ========================================================= */
+
+.form-group {
+  margin-bottom: 22px;
+}
+
+.form-group label {
+  display: block;
+
+  margin-bottom: 8px;
+
+  color: #d1d5db;
+
+  font-size: 0.82rem;
+
+  font-weight: 600;
+}
+
+
+/* =========================================================
+   INPUTS
+   ========================================================= */
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+
+  box-sizing: border-box;
+
+  padding: 13px 15px;
+
+  border: 1px solid
+    rgba(255, 255, 255, 0.1);
+
+  border-radius: 9px;
+
+  outline: none;
+
+  background:
+    rgba(255, 255, 255, 0.045);
+
+  color: #ffffff;
+
+  font-family: inherit;
+
+  font-size: 0.9rem;
+
+  transition:
+    border-color 0.25s ease,
+    background 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+
+/* =========================================================
+   PLACEHOLDER
+   ========================================================= */
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: #6b7280;
+}
+
+
+/* =========================================================
+   FOCUS
+   ========================================================= */
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: #6366f1;
+
+  background:
+    rgba(99, 102, 241, 0.05);
+
+  box-shadow:
+    0 0 0 3px
+    rgba(99, 102, 241, 0.1);
+}
+
+
+/* =========================================================
+   SELECT
+   ========================================================= */
+
+.form-group select {
+  appearance: none;
+
+  cursor: pointer;
+
+  background-image:
+    linear-gradient(45deg, transparent 50%, #9ca3af 50%),
+    linear-gradient(135deg, #9ca3af 50%, transparent 50%);
+
+  background-position:
+    calc(100% - 18px) 50%,
+    calc(100% - 13px) 50%;
+
+  background-size:
+    5px 5px,
+    5px 5px;
+
+  background-repeat: no-repeat;
+
+  padding-right: 40px;
+}
+
+.form-group select option {
+  background: #111827;
+
+  color: #ffffff;
+}
+
+
+/* =========================================================
+   TEXTAREA
+   ========================================================= */
+
+.form-group textarea {
+  min-height: 150px;
+
+  resize: vertical;
+
+  line-height: 1.6;
+}
+
+
+/* =========================================================
+   SUBMIT BUTTON
+   ========================================================= */
+
+.contact-form-container button {
+  width: 100%;
+
+  padding: 14px 20px;
+
+  border: none;
+
+  border-radius: 9px;
+
+  background: #6366f1;
+
+  color: #ffffff;
+
+  font-family: inherit;
+
+  font-size: 0.9rem;
+
+  font-weight: 700;
+
+  letter-spacing: 0.3px;
+
+  cursor: pointer;
+
+  transition:
+    background 0.25s ease,
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.contact-form-container button:hover:not(:disabled) {
+  background: #4f46e5;
+
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 10px 25px
+    rgba(99, 102, 241, 0.25);
+}
+
+.contact-form-container button:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+
+/* =========================================================
+   DISABLED BUTTON
+   ========================================================= */
+
+.contact-form-container button:disabled {
+  opacity: 0.45;
+
+  cursor: not-allowed;
+}
+
+
+/* =========================================================
+   ANGULAR FORM VALIDATION
+   ========================================================= */
+
+.form-group input.ng-invalid.ng-touched,
+.form-group select.ng-invalid.ng-touched,
+.form-group textarea.ng-invalid.ng-touched {
+  border-color: #ef4444;
+}
+
+.form-group input.ng-valid.ng-touched,
+.form-group select.ng-valid.ng-touched,
+.form-group textarea.ng-valid.ng-touched {
+  border-color: rgba(99, 102, 241, 0.5);
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+  .contact-section {
+    padding-left: 5%;
+
+    padding-right: 5%;
+  }
+
+  .contact-container {
+    grid-template-columns: 1fr;
+
+    gap: 45px;
+
+    max-width: 750px;
+  }
+
+  .contact-info {
+    padding-top: 0;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+  .contact-section {
+    padding-top: 75px;
+
+    padding-bottom: 60px;
+
+    padding-left: 5%;
+
+    padding-right: 5%;
+  }
+
+  .contact-header {
+    margin-bottom: 45px;
+  }
+
+  .contact-header h1 {
+    font-size: 2.3rem;
+  }
+
+  .contact-header p {
+    font-size: 0.9rem;
+  }
+
+  .contact-info h2 {
+    font-size: 1.7rem;
+  }
+
+  .contact-form-container {
+    padding: 22px;
+
+    border-radius: 14px;
+  }
+
+}
+
+
+/* =========================================================
+   SMALL PHONES
+   ========================================================= */
+
+@media (max-width: 400px) {
+
+  .contact-section {
+    padding-left: 4%;
+
+    padding-right: 4%;
+  }
+
+  .contact-header h1 {
+    font-size: 2rem;
+  }
+
+  .contact-form-container {
+    padding: 18px;
+  }
+
+  .social-links {
+    flex-wrap: wrap;
+  }
+
 }

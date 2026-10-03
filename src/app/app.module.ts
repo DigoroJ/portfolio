@@ -13,6 +13,7 @@ import { ProjectsComponent } from './projects/projects.component';
 import { ContactsComponent } from './contacts/contacts.component';
 import { FooterComponent } from './footer/footer.component';
 import { SkillsComponent } from './skills/skills.component';
+import { EducationComponent } from './education/education.component';
 
 @NgModule({
 
@@ -31,8 +32,9 @@ import { SkillsComponent } from './skills/skills.component';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
-  ],
+    HttpClientModule,
+    EducationComponent
+],
 
   providers: [],
 

@@ -1,0 +1,812 @@
+/* =========================================================
+   EDUCATION COMPONENT
+   ========================================================= */
+
+:host {
+  display: block;
+}
+
+
+/* =========================================================
+   MAIN SECTION
+   ========================================================= */
+
+.education-section {
+  min-height: 100vh;
+
+  padding: 110px 7% 100px;
+
+  background:
+    radial-gradient(
+      circle at 10% 10%,
+      rgba(99, 102, 241, 0.08),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 90% 80%,
+      rgba(79, 70, 229, 0.05),
+      transparent 30%
+    ),
+    #080c14;
+
+  color: #ffffff;
+
+  box-sizing: border-box;
+}
+
+
+/* =========================================================
+   SECTION HEADER
+   ========================================================= */
+
+.section-header {
+  max-width: 800px;
+
+  margin: 0 auto 70px;
+
+  text-align: center;
+}
+
+.section-label {
+  display: inline-block;
+
+  margin-bottom: 15px;
+
+  color: #818cf8;
+
+  font-size: 0.78rem;
+  font-weight: 700;
+
+  letter-spacing: 2.5px;
+
+  text-transform: uppercase;
+}
+
+.section-header h1 {
+  margin: 0 0 20px;
+
+  color: #ffffff;
+
+  font-size: clamp(2.3rem, 5vw, 3.8rem);
+
+  font-weight: 800;
+
+  line-height: 1.1;
+
+  letter-spacing: -1.5px;
+}
+
+.section-header h1 span {
+  color: #818cf8;
+}
+
+.section-header p {
+  max-width: 700px;
+
+  margin: 0 auto;
+
+  color: #9ca3af;
+
+  font-size: 1rem;
+
+  line-height: 1.8;
+}
+
+
+/* =========================================================
+   CONTENT BLOCK
+   ========================================================= */
+
+.content-block {
+  width: 100%;
+
+  max-width: 1150px;
+
+  margin: 0 auto 80px;
+}
+
+
+/* =========================================================
+   BLOCK HEADING
+   ========================================================= */
+
+.block-heading {
+  display: flex;
+
+  align-items: center;
+
+  gap: 14px;
+
+  margin-bottom: 30px;
+}
+
+.heading-line {
+  width: 5px;
+
+  height: 28px;
+
+  flex-shrink: 0;
+
+  border-radius: 10px;
+
+  background: #6366f1;
+}
+
+.block-heading h2 {
+  margin: 0;
+
+  color: #ffffff;
+
+  font-size: 1.7rem;
+
+  font-weight: 700;
+}
+
+
+/* =========================================================
+   EDUCATION LIST
+   ========================================================= */
+
+.education-list {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 20px;
+}
+
+
+/* =========================================================
+   EDUCATION CARD
+   ========================================================= */
+
+.education-card {
+  display: flex;
+
+  align-items: flex-start;
+
+  gap: 24px;
+
+  width: 100%;
+
+  padding: 28px;
+
+  box-sizing: border-box;
+
+  background: rgba(255, 255, 255, 0.035);
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  border-radius: 18px;
+
+  transition:
+    transform 0.25s ease,
+    border-color 0.25s ease,
+    background 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.education-card:hover {
+  transform: translateY(-4px);
+
+  background: rgba(255, 255, 255, 0.05);
+
+  border-color: rgba(99, 102, 241, 0.45);
+
+  box-shadow:
+    0 15px 40px rgba(0, 0, 0, 0.2);
+}
+
+
+/* =========================================================
+   EDUCATION LOGO
+   ========================================================= */
+
+.education-icon {
+  width: 72px;
+
+  height: 72px;
+
+  flex-shrink: 0;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  padding: 9px;
+
+  box-sizing: border-box;
+
+  background: #ffffff;
+
+  border-radius: 14px;
+
+  overflow: hidden;
+
+  box-shadow:
+    0 5px 20px rgba(0, 0, 0, 0.15);
+}
+
+.education-icon img {
+  width: 100%;
+
+  height: 100%;
+
+  display: block;
+
+  object-fit: contain;
+}
+
+
+/* =========================================================
+   EDUCATION CONTENT
+   ========================================================= */
+
+.education-content {
+  flex: 1;
+
+  min-width: 0;
+}
+
+
+/* =========================================================
+   EDUCATION TOP ROW
+   ========================================================= */
+
+.education-top {
+  display: flex;
+
+  align-items: flex-start;
+
+  justify-content: space-between;
+
+  gap: 25px;
+}
+
+.education-content h3 {
+  margin: 0 0 7px;
+
+  color: #ffffff;
+
+  font-size: 1.25rem;
+
+  font-weight: 700;
+
+  line-height: 1.4;
+}
+
+.education-content h4 {
+  margin: 0;
+
+  color: #a5b4fc;
+
+  font-size: 1rem;
+
+  font-weight: 500;
+
+  line-height: 1.5;
+}
+
+
+/* =========================================================
+   EDUCATION DATE
+   ========================================================= */
+
+.date {
+  flex-shrink: 0;
+
+  padding: 6px 11px;
+
+  border-radius: 6px;
+
+  background: rgba(99, 102, 241, 0.08);
+
+  color: #a5b4fc;
+
+  font-size: 0.78rem;
+
+  font-weight: 600;
+
+  white-space: nowrap;
+}
+
+
+/* =========================================================
+   EDUCATION DESCRIPTION
+   ========================================================= */
+
+.education-content p {
+  margin: 18px 0;
+
+  color: #9ca3af;
+
+  font-size: 0.92rem;
+
+  line-height: 1.75;
+}
+
+
+/* =========================================================
+   EDUCATION SKILLS
+   ========================================================= */
+
+.skills-list {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 8px;
+}
+
+.skills-list span {
+  display: inline-flex;
+
+  align-items: center;
+
+  padding: 6px 10px;
+
+  border: 1px solid rgba(99, 102, 241, 0.12);
+
+  border-radius: 6px;
+
+  background: rgba(99, 102, 241, 0.08);
+
+  color: #a5b4fc;
+
+  font-size: 0.75rem;
+
+  line-height: 1.2;
+}
+
+
+/* =========================================================
+   CERTIFICATIONS SECTION
+   ========================================================= */
+
+.certifications-block {
+  margin-top: 10px;
+}
+
+
+/* =========================================================
+   CERTIFICATION GRID
+   ========================================================= */
+
+.certifications-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  gap: 20px;
+}
+
+
+/* =========================================================
+   CERTIFICATION CARD
+   ========================================================= */
+
+.certification-card {
+  display: flex;
+
+  flex-direction: column;
+
+  min-width: 0;
+
+  padding: 25px;
+
+  box-sizing: border-box;
+
+  background: rgba(255, 255, 255, 0.035);
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  border-radius: 18px;
+
+  transition:
+    transform 0.25s ease,
+    border-color 0.25s ease,
+    background 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.certification-card:hover {
+  transform: translateY(-4px);
+
+  background: rgba(255, 255, 255, 0.05);
+
+  border-color: rgba(99, 102, 241, 0.45);
+
+  box-shadow:
+    0 15px 40px rgba(0, 0, 0, 0.2);
+}
+
+
+/* =========================================================
+   CERTIFICATION TOP
+   ========================================================= */
+
+.certification-top {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 15px;
+
+  margin-bottom: 20px;
+}
+
+
+/* =========================================================
+   CERTIFICATION LOGO
+   ========================================================= */
+
+.certification-logo {
+  width: 58px;
+
+  height: 58px;
+
+  flex-shrink: 0;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  padding: 8px;
+
+  box-sizing: border-box;
+
+  background: #ffffff;
+
+  border-radius: 12px;
+
+  overflow: hidden;
+
+  box-shadow:
+    0 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+.certification-logo img {
+  width: 100%;
+
+  height: 100%;
+
+  display: block;
+
+  object-fit: contain;
+}
+
+
+/* =========================================================
+   CERTIFICATION DATE
+   ========================================================= */
+
+.certification-date {
+  color: #9ca3af;
+
+  font-size: 0.78rem;
+
+  font-weight: 500;
+
+  white-space: nowrap;
+}
+
+
+/* =========================================================
+   CERTIFICATION TITLE
+   ========================================================= */
+
+.certification-card h3 {
+  margin: 0 0 10px;
+
+  color: #ffffff;
+
+  font-size: 1.03rem;
+
+  font-weight: 700;
+
+  line-height: 1.5;
+}
+
+
+/* =========================================================
+   CERTIFICATION ISSUER
+   ========================================================= */
+
+.issuer {
+  margin: 0 0 16px;
+
+  color: #a5b4fc;
+
+  font-size: 0.88rem;
+
+  font-weight: 600;
+}
+
+
+/* =========================================================
+   CERTIFICATION SKILLS
+   ========================================================= */
+
+.certification-skills {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 6px;
+
+  margin-bottom: 15px;
+}
+
+.certification-skills span {
+  display: inline-flex;
+
+  align-items: center;
+
+  padding: 5px 9px;
+
+  border-radius: 6px;
+
+  background: rgba(99, 102, 241, 0.08);
+
+  color: #a5b4fc;
+
+  font-size: 0.72rem;
+}
+
+
+/* =========================================================
+   CREDENTIAL ID
+   ========================================================= */
+
+.credential {
+  margin: auto 0 0;
+
+  padding-top: 15px;
+
+  color: #6b7280;
+
+  font-size: 0.7rem;
+
+  line-height: 1.6;
+
+  word-break: break-word;
+}
+
+.credential span {
+  color: #818cf8;
+
+  word-break: break-all;
+}
+
+
+/* =========================================================
+   TUT LOGO
+   ========================================================= */
+
+.education-icon img[alt*="Tshwane"] {
+  object-fit: contain;
+}
+
+
+/* =========================================================
+   SPECCon LOGO
+   ========================================================= */
+
+.education-icon img[alt*="SpecCon"] {
+  object-fit: contain;
+}
+
+
+/* =========================================================
+   RESPONSIVE - TABLET
+   ========================================================= */
+
+@media (max-width: 950px) {
+
+  .education-section {
+    padding-left: 5%;
+
+    padding-right: 5%;
+  }
+
+  .content-block {
+    max-width: 100%;
+  }
+
+  .certifications-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+}
+
+
+/* =========================================================
+   RESPONSIVE - SMALL TABLET
+   ========================================================= */
+
+@media (max-width: 750px) {
+
+  .education-card {
+    padding: 23px;
+
+    gap: 18px;
+  }
+
+  .education-top {
+    flex-direction: column;
+
+    gap: 8px;
+  }
+
+  .date {
+    align-self: flex-start;
+  }
+
+  .certifications-grid {
+    grid-template-columns: 1fr;
+  }
+
+}
+
+
+/* =========================================================
+   RESPONSIVE - MOBILE
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+  .education-section {
+    padding-top: 80px;
+
+    padding-bottom: 70px;
+
+    padding-left: 5%;
+
+    padding-right: 5%;
+  }
+
+
+  /* Header */
+
+  .section-header {
+    margin-bottom: 50px;
+  }
+
+  .section-header h1 {
+    font-size: 2.3rem;
+
+    letter-spacing: -1px;
+  }
+
+  .section-header p {
+    font-size: 0.92rem;
+
+    line-height: 1.7;
+  }
+
+
+  /* Section heading */
+
+  .block-heading {
+    margin-bottom: 22px;
+  }
+
+  .block-heading h2 {
+    font-size: 1.45rem;
+  }
+
+
+  /* Education */
+
+  .education-card {
+    flex-direction: column;
+
+    padding: 22px;
+
+    gap: 18px;
+  }
+
+  .education-icon {
+    width: 62px;
+
+    height: 62px;
+
+    padding: 8px;
+  }
+
+  .education-content h3 {
+    font-size: 1.08rem;
+  }
+
+  .education-content h4 {
+    font-size: 0.9rem;
+  }
+
+  .education-content p {
+    font-size: 0.88rem;
+
+    line-height: 1.7;
+  }
+
+
+  /* Certifications */
+
+  .certification-card {
+    padding: 22px;
+  }
+
+  .certification-logo {
+    width: 54px;
+
+    height: 54px;
+  }
+
+  .certification-card h3 {
+    font-size: 0.98rem;
+  }
+
+}
+
+
+/* =========================================================
+   RESPONSIVE - SMALL PHONE
+   ========================================================= */
+
+@media (max-width: 400px) {
+
+  .education-section {
+    padding-left: 4%;
+
+    padding-right: 4%;
+  }
+
+  .section-header h1 {
+    font-size: 2rem;
+  }
+
+  .section-label {
+    font-size: 0.7rem;
+
+    letter-spacing: 2px;
+  }
+
+  .education-card {
+    padding: 18px;
+  }
+
+  .certification-card {
+    padding: 18px;
+  }
+
+  .skills-list span {
+    font-size: 0.7rem;
+
+    padding: 5px 8px;
+  }
+
+  .credential {
+    font-size: 0.65rem;
+  }
+
+}
+
+
+/* =========================================================
+   ACCESSIBILITY
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .education-card,
+  .certification-card {
+    transition: none;
+  }
+
+}

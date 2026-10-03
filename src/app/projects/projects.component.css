@@ -1,29 +1,199 @@
+.projects-page {
+  min-height: 100vh;
 
+  padding: 130px 0 100px;
 
-.col-sm-8{
-    border-left: solid black;
+  background: #050505;
+
+  color: white;
 }
 
-body{
-    background-color: black;
+.section-container {
+  max-width: 1200px;
+
+  margin: auto;
+
+  padding: 0 25px;
+}
+
+.section-heading span {
+  color: #3b82f6;
+
+  font-size: 12px;
+
+  font-weight: bold;
+
+  letter-spacing: 2px;
+}
+
+.section-heading h1 {
+  margin: 20px 0;
+
+  font-size: clamp(48px, 6vw, 72px);
+
+  line-height: 1;
+
+  letter-spacing: -3px;
+}
+
+.section-heading h1 em {
+  color: #737373;
+
+  font-style: normal;
+}
+
+.section-heading p {
+  max-width: 600px;
+
+  color: #71717a;
+
+  font-size: 17px;
+
+  line-height: 1.7;
+}
+
+
+/* GRID */
+
+.projects-grid {
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 20px;
+
+  margin-top: 70px;
+}
+
+
+/* CARD */
+
+.project-card {
+  min-height: 350px;
+
+  padding: 30px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: space-between;
+
+  background:
+    linear-gradient(
+      145deg,
+      #111111,
+      #090909
+    );
+
+  border: 1px solid #202020;
+
+  border-radius: 12px;
+
+  transition: 0.3s;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+
+  border-color: #333;
+}
+
+.project-card.featured {
+  border-color: rgba(59, 130, 246, 0.35);
+
+  background:
+    radial-gradient(
+      circle at 90% 10%,
+      rgba(59, 130, 246, 0.1),
+      transparent 30%
+    ),
+    #0b0b0b;
+}
+
+
+/* TOP */
+
+.project-top {
+  display: flex;
+
+  justify-content: space-between;
+
+  color: #3b82f6;
+
+  font-size: 12px;
+
+  font-weight: bold;
+}
+
+.project-type {
+  color: #52525b;
+
+  font-weight: normal;
+}
+
+
+/* CONTENT */
+
+.project-content h2 {
+  font-size: 30px;
+
+  margin-bottom: 15px;
+}
+
+.project-content p {
+  max-width: 500px;
+
+  color: #a1a1aa;
+
+  line-height: 1.7;
+}
+
+
+/* TECHNOLOGIES */
+
+.technologies {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 8px;
+
+  margin-top: 25px;
+}
+
+.technologies span {
+  padding: 7px 10px;
+
+  background: #171717;
+
+  border: 1px solid #252525;
+
+  border-radius: 5px;
+
+  color: #a1a1aa;
+
+  font-size: 11px;
+}
+
+
+@media (max-width: 700px) {
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
 
 }
 
-img{
-    width:100%;
-}
 
-.upRight{
-    
-    padding-left: 3rem;;
-}
+@media (max-width: 500px) {
 
-.col-sm-4{
-    padding-top:5rem;
-}
+  .projects-page {
+    padding: 100px 0 70px;
+  }
 
-h1{
-    font-size: 50px;
-    font-family: Georgia;
-    color: white;
+  .section-heading h1 {
+    letter-spacing: -2px;
+  }
+
 }
